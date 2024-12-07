@@ -18,7 +18,8 @@
 import axios from 'axios';
 
 // Base URL for the backend API
-const API_URL = 'http://localhost:5000/api'; // Replace with your actual backend URL
+//const API_URL = 'http://localhost:5000/api'; // Replace with your actual backend URL
+const API_URL = 'backend-ecommerce-hazel.vercel.app'; // Replace with your actual backend URL
 
 // Create an Axios instance
 const httpClient = axios.create({
