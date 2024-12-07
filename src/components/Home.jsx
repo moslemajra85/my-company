@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import httpClient from '../services/httpClient';
 import Sidebar from './Sidebar';
-
+import ProductDetails from './ProductDetails';
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState('');
@@ -29,15 +29,7 @@ const Home = () => {
           }}
         >
           {products.map((product) => (
-            <div
-              key={product._id}
-              style={{ border: '1px solid #ccc', padding: '10px' }}
-            >
-              <h3>{product.name}</h3>
-              <p>{product.description}</p>
-              <p>${product.price}</p>
-              <Link to={`/products/${product._id}`}>View Details</Link>
-            </div>
+            <ProductDetails product={product} key={product.id} />
           ))}
         </div>
       </div>
